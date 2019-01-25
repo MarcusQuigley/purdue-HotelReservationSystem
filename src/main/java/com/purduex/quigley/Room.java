@@ -36,7 +36,7 @@ public class Room {
     public boolean setOccupant(String guestName, int days) {
         if (guestName.isEmpty() || days < 1) {
             return false;
-            //should rally raise exception instead.
+            //should really raise exception instead.
         }
         if (isOccupied()) {
             return false;
