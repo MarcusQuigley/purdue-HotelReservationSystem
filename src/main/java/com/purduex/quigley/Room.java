@@ -48,7 +48,7 @@ public class Room {
 
     public void advanceDay() {
         daysRented -= 1;
-        if (daysRented == 0) {
+        if (daysRented < 1) {
             occupantName = null;
         }
     }
@@ -58,7 +58,7 @@ public class Room {
     }
 
     private String checkRoomType(String type) {
-        if (type.isEmpty()){// || type.isBlank()) {
+        if (type.isEmpty()) {// || type.isBlank()) {
             type = "double queen";
         }
         String result = "";
